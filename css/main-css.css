@@ -203,6 +203,10 @@ position: relative;
         width: 100%;
         justify-content: center;
         height: 40px;
+       
+    }
+    .header .container{
+        flex-direction: column;
     }
 }
 
@@ -219,7 +223,7 @@ position: relative;
 
 @media (max-width:767px) {
     .header .logo {
-        margin: auto;
+        margin-bottom: 25px;
     }
 }
 
