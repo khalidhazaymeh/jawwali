@@ -165,6 +165,137 @@ position: relative;
 
 /* End Global Ruls */
 /* ********************************************************** */
+
+/* Start main Slider */
+
+
+.slider-container{
+    margin: 10px auto;
+    width: 950px;
+    height: 550px;
+    position: relative;
+}
+
+@media(max-width:800px){
+    .slider-container{
+        display: none;
+    }
+}
+
+.slider-container img{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    width: 950px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.slider-container img.active{
+    opacity: 1;
+}
+
+.slider-container .slide-number{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+
+}
+
+.slider-controls{
+    width: 800px;
+    margin: auto;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.slider-controls .prev ,
+.slider-controls .next{
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    user-select: none;
+    width: 20%;
+    z-index: 5;
+
+}
+
+.slider-controls .prev{
+    /* float: left; */
+  
+    position: absolute;
+    left: -150px;
+    top: -350px;
+
+
+}
+
+.slider-controls .next{
+    position: absolute;
+    right: -150px;
+    top: -350px;
+}
+
+
+.slider-controls .prev.disabled ,
+.slider-controls .next.disabled{
+    background-color: rgb(26, 26, 27);
+    cursor: no-drop;
+}
+
+.slider-controls .indicators {
+    width: 60%;
+    /* float: left; */
+    position: relative;
+
+  }
+  .slider-controls .indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+   
+  }
+
+
+  @media(max-width:800px){
+    .slider-controls .indicators{
+        display: none;
+    }
+  }
+  .slider-controls .indicators ul li {
+    display: inline-block;
+    background-color: #009688;
+    color: #009688;
+    font-weight: bold;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 1px;
+  }
+  .slider-controls .indicators ul li.active {
+    background-color: #009688;
+    color: #009688;
+    height: 20px;
+    width: 20px;
+   border: 1px solid black;
+  }
+
+/* End main Slider */
 /* Start Header */
 .header {
 
@@ -1031,7 +1162,7 @@ flex-direction: column;
 
 .services .container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap:50px;
     position: relative;
 
